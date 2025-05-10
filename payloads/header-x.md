@@ -1,0 +1,39 @@
+# List of X-Headers and Their Descriptions
+
+- **X-Host**: Meniru header Host, kadang digunakan dalam rewrite.
+- **X-Forwarded-For**: Alamat IP klien asli, digunakan oleh proxy.
+- **X-Forwarded-Host**: Host header yang digunakan oleh klien, bisa dipakai untuk redirect poisoning.
+- **X-Forwarded-Proto**: Skema protokol (http/https) dari klien.
+- **X-Forwarded-Scheme**: Mirip dengan X-Forwarded-Proto, digunakan oleh beberapa proxy.
+- **X-Frame-Options**: Mengontrol apakah konten bisa dimuat dalam iframe.
+- **X-Http-Method-Override**: Mengganti method HTTP, misal POST jadi DELETE.
+- **X-Original-URL**: URL asli yang diminta oleh klien, bisa digunakan dalam URL rewrite.
+- **X-Originating-IP**: IP pengirim asli, kadang digunakan oleh email/SMTP.
+- **X-ATT-DeviceId**: Device ID, biasanya dari perangkat mobile.
+- **X-Amzn-Trace-Id**: Trace ID AWS.
+- **X-Application-Context**: Spring Boot header internal yang bisa bocorkan info internal.
+- **X-AspNet-Version**: Versi ASP.NET yang digunakan.
+- **X-AspNetMvc-Version**: Versi ASP.NET MVC yang digunakan.
+- **X-B3-Flags**: Flag tracing.
+- **X-B3-ParentSpanId**: Span ID induk.
+- **X-B3-Sampled**: Status sampling tracing.
+- **X-B3-SpanId**: Span ID tracing.
+- **X-B3-TraceId**: ID tracing untuk observability.
+- **X-Client-IP**: IP klien, seperti X-Forwarded-For.
+- **X-Content-Duration**: Durasi konten, biasanya untuk media.
+- **X-Content-Type-Options**: Biasanya di-set ke nosniff untuk keamanan.
+- **X-Csrf-Token**: Untuk pengujian CSRF, bisa bocor atau digunakan untuk validasi.
+- **X-DNS-Prefetch-Control**: Mengontrol prefetch DNS di browser.
+- **X-Download-Options**: Biasanya di-set ke noopen untuk mencegah auto-download di IE.
+- **X-Permitted-Cross-Domain-Policies**: Digunakan oleh Flash untuk kontrol akses lintas domain.
+- **X-Powered-By**: Menampilkan teknologi yang digunakan, bisa bocorkan versi software.
+- **X-Real-IP**: IP asli pengguna, alternatif X-Forwarded-For.
+- **X-Remote-Addr**: Alamat IP remote.
+- **X-Remote-IP**: Alamat IP remote.
+- **X-Requested-With**: Biasanya di-set ke XMLHttpRequest oleh JS/AJAX.
+- **X-Runtime**: Waktu proses request.
+- **X-UIDH**: Digunakan oleh Verizon untuk tracking user.
+- **X-Version**: Versi aplikasi.
+- **X-Wap-Profile**: Profil WAP perangkat, digunakan pada mobile device.
+- **X-XSRF-TOKEN**: Token anti-CSRF.
+- **X-XSS-Protection**: Mengaktifkan perlindungan XSS di browser.
